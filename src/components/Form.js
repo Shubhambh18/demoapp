@@ -9,11 +9,12 @@ export default class Form extends React.Component{
             lastname:'',
             email:''
         };
+        //this.rowCallback = this.rowCallback.bind(this);
+       
     }
 
-    onGreet(){
-       alert("Hello")
-    }
+   
+    
     handleChange = (event) => {
         this.setState ({
             [event.target.name]:event.target.value
@@ -26,20 +27,21 @@ export default class Form extends React.Component{
         alert("Your Submitted data is "+ this.state.firstname + " and " + this.state.lastname  );
         event.preventDefault();
     }    
+    
     render()
     {
-        var user = {
-            firstname:"Shubham"
-        };
+        
+      
         return(
             <form onSubmit ={this.handleSubmit}>
 
 
 <p><div >First Name</div>
 <div > <p> 
-<input name='firstname' placeholder ='' value={this.state.firstname} onChange={this.handleChange} greet={this.onGreet} user={user}/> </p>
+<input name='firstname' placeholder ='' value={this.state.firstname} onChange={this.handleChange}/> </p>
 </div>
 </p>
+
 <p><div >Last Name</div>
 <div > <p> 
 <input name='lastname' placeholder ='' value={this.state.lastname} onChange={this.handleChange} /> </p>

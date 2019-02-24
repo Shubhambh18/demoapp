@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'semantic-ui-react'
 
 
 export default class Form2 extends React.Component{
@@ -40,7 +41,11 @@ export default class Form2 extends React.Component{
 <input type='number' name="empid"  value={this.state.empid}  onChange={this.handleChange}/> </p>
 </div>
 </p>
-<input type='submit' value="Submit" />
+
+<Button primary  animated='fade'>
+      <Button.Content visible>Submit</Button.Content>
+      <Button.Content hidden>Click Here</Button.Content>
+    </Button>
 </form>
 
 
@@ -48,3 +53,4 @@ export default class Form2 extends React.Component{
         
     }
 }
+//<button primary value="Submit" >Submit </button>
